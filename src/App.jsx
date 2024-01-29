@@ -21,17 +21,19 @@ const App = () => {
 
   return (
     <div>
-      <div className='text-center'>
+      <h1 className="text-3xl font-bold text-center p-4 m-2">PRODUCTS</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {
-          products.map((item, index) => {
-            return (
-              <div key={index}>
-                <h1>{item.brand}</h1>
-                <p>{item.category}</p>
-                <img src={item.thumbnail} alt={item.brand} />
-              </div>
-            )
-          })
+          products.map((item, index) => (
+            <div key={index} className="p-4 border-2 border-black rounded">
+              <h1 className="text-xl font-bold">{item.title}</h1>
+              <p className="text-gray-500">{item.category}</p>
+              <img className="mt-2 h-[300px] w-[300px] mx-auto" src={item.thumbnail} alt={item.brand} />
+              <p className="mt-2">{item.description}</p>
+              <p className="mt-2 text-gray-500">Price: ${item.price}</p>
+              <p className="mt-2 text-gray-500">Rating: {item.rating}</p>
+            </div>
+          ))
         }
       </div>
       <div className='text-center'>
