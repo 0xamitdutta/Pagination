@@ -39,7 +39,7 @@ const App = () => {
       <div className='text-center'>
         {
           page > 1 && (
-            <button onClick={() => setPage(page - 1)} className='mx-2 p-2 bg-slate-400 rounded' disabled={page === 1}>Previous</button>
+            <button onClick={() => setPage(page - 1)} className='mx-2 p-3 w-[100px] bg-slate-400 rounded' disabled={page === 1}>Previous</button>
           )
         }
 
@@ -52,7 +52,7 @@ const App = () => {
         }
         {
           page < Math.ceil(totalProducts / 10) && (
-            <button onClick={() => setPage(page + 1)} className='mx-2 p-2 bg-slate-400 rounded' disabled={page === Math.ceil(totalProducts / 10)}>Next</button>
+            <button onClick={() => setPage(page + 1)} className='mx-2 p-3 w-[100px] bg-slate-400 rounded' disabled={page === Math.ceil(totalProducts / 10)}>Next</button>
           )
         }
 
